@@ -47,7 +47,7 @@ void count(List input) {
       output2[i] = (searchInABC(element, abc) * (i + 1)) + output2[i];
     });
   }
-// печатаем ответ
+// выводим ответ
   print(output2);
 }
 
