@@ -1,0 +1,19 @@
+void main() {
+  var myArr1 = <int>[1, -10, 9, -1];
+  var myArr2 = <int>[-1, -2, -3];
+  var myArr3 = <int>[];
+  var myArr4 = <int>[1, 2];
+
+  Function sum = (var input) {
+    int c = 0;
+    for (var i = 0; i < input.length; i++) {
+      if (input[i] > 0) c = input[i] + c;
+    }
+    print(c);
+  };
+
+  sum(myArr1);
+  sum(myArr2);
+  sum(myArr3);
+  sum(myArr4);
+}
