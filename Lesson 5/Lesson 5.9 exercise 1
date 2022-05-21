@@ -1,0 +1,27 @@
+void main() {
+
+  var myStr = <String>['a', 'ab', 'abc'];
+  var myStr2 = <String>['abcde', 'ab', 'abc'];
+  var myStr3 = <String>[];
+
+// Объявляем переменную sumString и присваиваем ему анонимную функцию;
+  Function sumString = (var input) {
+    int c = 0;
+    // Проверяем, не является ли заданная переменная нулевой. Если нулевая - выводим ответ "0";
+    if (input.length == 0) {
+      print('0');
+      // Если не равняется "0" перебираем массив и перебираем каждый элемент массива;
+    } else {
+      for (var i = 0; i < input.length; i++) {
+        input[i].split('').forEach((element) {
+          c++;
+        });
+      }
+      print(c);
+    }
+  };
+
+  sumString(myStr);
+  sumString(myStr2);
+  sumString(myStr3);
+}
