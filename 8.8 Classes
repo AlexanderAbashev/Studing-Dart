@@ -1,0 +1,46 @@
+void main() {
+  var myCuboid = Cuboid(1, 2, 3);
+  // myCuboid.length = 1;
+  // myCuboid.width = 2;
+  // myCuboid.hieght = 3;
+  print('Cuboid Volume = ${myCuboid.volume}');
+  print('Cuboid Surface Area = ${myCuboid.surfaceArea}');
+  var myCube = Cube(2);
+  print('Cube Volume = ${myCube.volume}');
+  print('Cube Surface Area = ${myCube.surfaceArea}');
+}
+
+class Cuboid {
+  int _length;
+  int _width;
+  int _hieght;
+
+  Cuboid(this._length, this._width, this._hieght);
+
+  void set length(int lengthS) {
+    _length = (lengthS < 0) ? _length = 1 : _length = lengthS;
+  }
+
+  void set width(int widthS) {
+    _width = (widthS < 0) ? _width = 1 : _width = widthS;
+  }
+
+  void set hieght(int hieghtS) {
+    _hieght = (hieghtS < 0) ? _hieght = 1 : _hieght = hieghtS;
+  }
+
+  int get surfaceArea {
+    int sqrSA =
+        _length * _width * 2 + _width * _hieght * 2 + _hieght * _length * 2;
+    return sqrSA;
+  }
+
+  int get volume {
+    int vol = _length * _hieght * _width;
+    return vol;
+  }
+}
+
+class Cube extends Cuboid {
+  Cube(int length) : super(length, length, length);
+}
